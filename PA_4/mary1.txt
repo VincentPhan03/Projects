@@ -1,0 +1,3 @@
+Note that these sizes represent the number of bits in the encoding generated using a correctly constructed Huffman tree. They are not the actual file sizes that will result from calling zip. The .mz files contain some overhead in addition to the bit sequence data: they include the frequency map and some additional overhead inherent to Java serialization.
+
+The space overhead in the saved files mean that you should not be surprised if some files actually end up bigger after compression. It is possible that the space required for bookkeeping will outweigh any space savings gained by a more efficient encoding. This will tend to be true for small files and for files that were already compressed using some other tool.
